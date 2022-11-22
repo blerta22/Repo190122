@@ -1,14 +1,14 @@
 package com.example.springproject.converters;
 
 import com.example.springproject.dto.ProductDTO;
-import com.example.springproject.model.Products;
+import com.example.springproject.model.Product;
 import com.example.springproject.repositories.CategoryRepository;
 import com.example.springproject.repositories.SuppliersRepository;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ProductDTOtoProduct implements Converter<ProductDTO, Products> {
+public class ProductDTOtoProduct implements Converter<ProductDTO, Product> {
 
     private final CategoryRepository categoryRepository;
     private final SuppliersRepository suppliersRepository;
@@ -20,30 +20,30 @@ public class ProductDTOtoProduct implements Converter<ProductDTO, Products> {
 
 
     @Override
-    public Products convert(ProductDTO source) {
+    public Product convert(ProductDTO source) {
         if (source != null) {
-            Products products = new Products();
+            Product product = new Product();
             if (source.getId() != null) {
-                products.setId(source.getId());
-                products.setProductAvailable(source.getProductAvailable());
-                products.setProductName(source.getProductName());
-                products.setColor(source.getColor());
-                products.setProductDescription(source.getProductDescription());
-                products.setAvailableColors(source.getAvailableColors());
-                products.setColor(source.getColor());
-                products.setAvailableSize(source.getAvailableSize());
-                products.setSize(source.getSize());
-                products.setQuantityPerUnit(source.getQuantityPerUnit());
-                products.setUnitPrice(source.getUnitPrice());
-                products.setDiscount(source.getDiscount());
-                products.setUnitWeight(source.getUnitWeight());
-                products.setUnitsOnOrder(source.getUnitsOnOrder());
-                products.setUnitsInStock(source.getUnitsInStock());
-                products.setCategory(categoryRepository.findById(source.getCategoryId()).get());
-                products.setSupplier(suppliersRepository.findById(source.getSupplierId()).get());
+                product.setId(source.getId());
+                product.setProductAvailable(source.getProductAvailable());
+                product.setProductName(source.getProductName());
+                product.setColor(source.getColor());
+                product.setProductDescription(source.getProductDescription());
+                product.setAvailableColors(source.getAvailableColors());
+                product.setColor(source.getColor());
+                product.setAvailableSize(source.getAvailableSize());
+                product.setSize(source.getSize());
+                product.setQuantityPerUnit(source.getQuantityPerUnit());
+                product.setUnitPrice(source.getUnitPrice());
+                product.setDiscount(source.getDiscount());
+                product.setUnitWeight(source.getUnitWeight());
+                product.setUnitsOnOrder(source.getUnitsOnOrder());
+                product.setUnitsInStock(source.getUnitsInStock());
+                product.setCategory(categoryRepository.findById(source.getCategoryId()).get());
+                product.setSupplier(suppliersRepository.findById(source.getSupplierId()).get());
 
 
-                return products;
+                return product;
 
             }
         }

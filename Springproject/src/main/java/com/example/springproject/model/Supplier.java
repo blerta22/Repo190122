@@ -36,7 +36,7 @@ public class Supplier extends BaseEntity{
     private String Logo;
 
     @OneToMany(mappedBy = "supplier", cascade = CascadeType.ALL)
-    private Set<Products> products = new HashSet<>();
+    private Set<Product> products = new HashSet<>();
 
 
 
