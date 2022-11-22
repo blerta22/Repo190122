@@ -6,7 +6,9 @@ import com.example.springproject.repositories.CustomerRepository;
 import com.example.springproject.repositories.PaymentRepository;
 import com.example.springproject.repositories.ShipperRepository;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrderDTOtoOrder implements Converter<OrderDTO, Order> {
 
 private final CustomerRepository customerRepository;

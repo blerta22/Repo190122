@@ -3,7 +3,9 @@ package com.example.springproject.converters;
 import com.example.springproject.dto.OrderDTO;
 import com.example.springproject.model.Order;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrdertoOrderDTO implements Converter<Order, OrderDTO> {
 
 
