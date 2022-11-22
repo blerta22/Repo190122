@@ -23,5 +23,5 @@ public class Category extends BaseEntity{
     private Boolean Active;
 
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-    private Set<Products> products = new HashSet<>();
+    private Set<Product> products = new HashSet<>();
 }

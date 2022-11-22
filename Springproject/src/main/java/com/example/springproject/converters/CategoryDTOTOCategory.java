@@ -2,7 +2,6 @@ package com.example.springproject.converters;
 
 import com.example.springproject.dto.CategoryDTO;
 import com.example.springproject.model.Category;
-import com.example.springproject.model.Products;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 

@@ -1,15 +1,15 @@
 package com.example.springproject.converters;
 
 import com.example.springproject.dto.ProductDTO;
-import com.example.springproject.model.Products;
+import com.example.springproject.model.Product;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ProductToProductDTO implements Converter< Products, ProductDTO>  {
+public class ProductToProductDTO implements Converter<Product, ProductDTO>  {
 
     @Override
-    public ProductDTO convert(Products source) {
+    public ProductDTO convert(Product source) {
         if(source!= null){
             ProductDTO productDTO = new ProductDTO();
             productDTO.setId(source.getId());
