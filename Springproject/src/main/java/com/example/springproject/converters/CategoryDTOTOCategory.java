@@ -13,12 +13,13 @@ public class CategoryDTOTOCategory implements Converter<CategoryDTO, Category>{
         if (source != null) {
             Category category = new Category();
             if (source.getId()!= null) {
-                category.setId(source.getId());
+                category.setId(source.getId());}
                 category.setCategoryName(source.getCategoryName());
                 category.setDescription(source.getDescription());
                 category.setActive(source.getActive());
                 category.setPicture(source.getPicture());
-            }
+                return category;
+
         }
                 return null;
     }

@@ -24,7 +24,7 @@ public class ProductDTOtoProduct implements Converter<ProductDTO, Product> {
         if (source != null) {
             Product product = new Product();
             if (source.getId() != null) {
-                product.setId(source.getId());
+                product.setId(source.getId());}
                 product.setProductAvailable(source.getProductAvailable());
                 product.setProductName(source.getProductName());
                 product.setColor(source.getColor());
@@ -46,7 +46,7 @@ public class ProductDTOtoProduct implements Converter<ProductDTO, Product> {
                 return product;
 
             }
-        }
+
             return null;
         }
     }

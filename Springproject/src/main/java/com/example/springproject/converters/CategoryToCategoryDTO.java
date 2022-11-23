@@ -16,6 +16,7 @@ public class CategoryToCategoryDTO implements Converter<Category, CategoryDTO>{
             categoryDTO.setDescription(source.getDescription());
             categoryDTO.setActive(source.getActive());
             categoryDTO.setPicture(source.getPicture());
+            return categoryDTO;
         }
         return null;
     }
