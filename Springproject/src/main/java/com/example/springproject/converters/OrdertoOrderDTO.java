@@ -3,7 +3,9 @@ package com.example.springproject.converters;
 import com.example.springproject.dto.OrderDTO;
 import com.example.springproject.model.Order;
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
 
+@Component
 public class OrdertoOrderDTO implements Converter<Order, OrderDTO> {
 
 
@@ -11,6 +13,7 @@ public class OrdertoOrderDTO implements Converter<Order, OrderDTO> {
     public OrderDTO convert(Order source) {
         if(source!=null){
             OrderDTO orderDTO=new OrderDTO();
+            orderDTO.setId(orderDTO.getId());
             orderDTO.setOrderNumber(source.getOrderNumber());
             orderDTO.setOrderDate(source.getOrderDate());
             orderDTO.setPaid(source.isPaid());
