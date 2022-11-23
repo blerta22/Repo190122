@@ -13,6 +13,7 @@ public class OrdertoOrderDTO implements Converter<Order, OrderDTO> {
     public OrderDTO convert(Order source) {
         if(source!=null){
             OrderDTO orderDTO=new OrderDTO();
+            orderDTO.setId(orderDTO.getId());
             orderDTO.setOrderNumber(source.getOrderNumber());
             orderDTO.setOrderDate(source.getOrderDate());
             orderDTO.setPaid(source.isPaid());

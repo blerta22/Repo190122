@@ -14,13 +14,12 @@ public class PaymentDTOtoPayment implements Converter<PaymentDTO, Payment> {
         if(source!=null){
           Payment payment=new Payment();
           if(source.getId()!=null){
-
+            payment.setId(source.getId());}
            payment.setPaymentType(source.getPaymentType());
            payment.setAllowed(source.isAllowed());
            return payment;
-
           }
-        }
+
         return null;
     }
 }

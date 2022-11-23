@@ -13,6 +13,7 @@ public class PaymenttoPaymentDTO implements Converter<Payment, PaymentDTO> {
     public PaymentDTO convert(Payment source) {
         if(source!=null){
          PaymentDTO paymentDTO=new PaymentDTO();
+         paymentDTO.setId(source.getId());
          paymentDTO.setPaymentType(source.getPaymentType());
          paymentDTO.setAllowed(source.isAllowed());
            return paymentDTO;

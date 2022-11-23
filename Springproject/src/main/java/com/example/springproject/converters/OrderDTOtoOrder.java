@@ -27,6 +27,7 @@ private final PaymentRepository paymentRepository;
         if(source.getId()!=null){
             Order order=new Order();
             if(source.getId()!=null){
+                order.setId(order.getId());}
               order.setOrderNumber(source.getOrderNumber());
               order.setOrderDate(source.getOrderDate());
               order.setPaid(source.isPaid());
@@ -43,7 +44,6 @@ private final PaymentRepository paymentRepository;
               order.setShipper(shipperRepository.findById(source.getShipperId()).get());
               return order;
             }
-        }
         return null;
     }
 }
