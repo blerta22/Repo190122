@@ -27,6 +27,7 @@ public class SuppliersToSuppliersDTO implements Converter<Supplier, SuppliersDTO
             suppliersDTO.setURL(source.getURL());
             suppliersDTO.setCurrentOrder(source.getCurrentOrder());
             suppliersDTO.setPaymentMethods(source.getPaymentMethods());
+            return suppliersDTO;
 
         }
         return null;
